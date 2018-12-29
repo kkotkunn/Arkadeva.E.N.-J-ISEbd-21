@@ -4,9 +4,9 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class MyPanel extends JPanel {
-	Airplane airplane;
+	ITransport airplane;
 
-	public MyPanel(Airplane air) {
+	public MyPanel(ITransport air) {
 		airplane = air;
 	}
 
@@ -14,5 +14,4 @@ public class MyPanel extends JPanel {
 		super.paint(g);
 		airplane.DrawAirplane(g);
 	}
-
 }

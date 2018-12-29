@@ -33,29 +33,45 @@ public class Main {
 		initialize();
 	}
 
-	Airplane airplane;
+	public ITransport airplane;
 	private JPanel panel;
 	private JButton buttonLeft;
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBackground(new Color(224, 255, 255));
 		frame.setBounds(100, 100, 1200, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		Button button = new Button("Create");
+
+		Button button = new Button("Create Airplane");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				airplane = new Airplane(60, 10, Color.GRAY, Color.BLACK);
+				airplane = new Airplane(60, 10, Color.BLACK);
 				panel = new MyPanel(airplane);
-				panel.setBounds(100, 100, 1000, 550);
+				panel.setBounds(100, 100, 1000, 540);
 				frame.getContentPane().add(panel);
 				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());
 				panel.repaint();
 			}
 		});
-		button.setBounds(23, 10, 79, 24);
+
+		button.setBounds(161, 10, 99, 24);
 		frame.getContentPane().add(button);
+
+		Button button2 = new Button("Create Flybomber");
+		button2.setActionCommand("Create Flybomber");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				airplane = new Flybomber(60, 10, Color.BLACK, Color.RED);
+				panel = new MyPanel(airplane);
+				panel.setBounds(100, 100, 1000, 540);
+				frame.getContentPane().add(panel);
+				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());
+				panel.repaint();
+			}
+		});
+		button2.setBounds(43, 10, 112, 24);
+		frame.getContentPane().add(button2);
 
 		buttonLeft = new JButton("");
 		buttonLeft.addActionListener(new ActionListener() {

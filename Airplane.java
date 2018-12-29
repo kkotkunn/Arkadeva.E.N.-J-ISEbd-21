@@ -2,68 +2,26 @@ package labs;
 
 import java.awt.Color;
 import java.awt.Graphics;
-
 import labs.DirectionAir.Direction;
 
-public class Airplane {
-	private int _startPosX;
-	private int _startPosY;
-	private int _pictureWidth;
-	private int _pictureHeight;
+public class Airplane extends Vehicle {
+
 	private final int AirplaneWidth = 100;
 	private final int AirplaneHeight = 60;
-	private int MaxSpeed;
-
-	void getMaxSpeed(int MaxSpeed) {
-		this.MaxSpeed = MaxSpeed;
-	}
-
-	int setMaxSpeed() {
-		return this.MaxSpeed;
-	}
-
-	private int Weight;
-
-	void getWeight(int Weight) {
-		this.Weight = Weight;
-	}
-
-	int setWeight() {
-		return this.Weight;
-	}
-
-	private Color MainColor;
-
-	void getMainColor(Color MainColor) {
-		this.MainColor = MainColor;
-	}
-
-	Color setMainColor() {
-		return this.MainColor;
-	}
-
 	private Color DopColor;
 
 	void getDopColor(Color DopColor) {
 		this.DopColor = DopColor;
 	}
 
-	Color setDopColorr() {
+	Color setDopColor() {
 		return this.DopColor;
 	}
 
-	public Airplane(int maxSpeed, int weight, Color mainColor, Color dopColor) {
+	public Airplane(int maxSpeed, int weight, Color mainColor) {
 		MaxSpeed = maxSpeed;
 		Weight = weight;
 		MainColor = mainColor;
-		DopColor = dopColor;
-	}
-
-	public void SetPosition(int x, int y, int width, int height) {
-		_startPosX = x;
-		_startPosY = y;
-		_pictureWidth = width;
-		_pictureHeight = height;
 	}
 
 	public void MoveTransport(Direction direction) {
