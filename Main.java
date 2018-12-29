@@ -54,6 +54,7 @@ public class Main {
 				panel.repaint();
 			}
 		});
+
 		button.setBounds(161, 10, 99, 24);
 		frame.getContentPane().add(button);
 
@@ -126,7 +127,5 @@ public class Main {
 		buttonRight.setIconTextGap(2);
 		buttonRight.setBounds(1113, 691, 40, 40);
 		frame.getContentPane().add(buttonRight);
-
 	}
-
 }
