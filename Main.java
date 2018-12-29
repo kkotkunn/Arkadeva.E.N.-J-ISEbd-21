@@ -47,7 +47,7 @@ public class Main {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				airplane = new Airplane(60, 10, Color.BLACK);
-				panel = new MyPanel(airplane);
+				panel = new MyPanel();
 				panel.setBounds(100, 100, 1000, 540);
 				frame.getContentPane().add(panel);
 				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());
@@ -63,7 +63,7 @@ public class Main {
 		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				airplane = new Flybomber(60, 10, Color.BLACK, Color.RED);
-				panel = new MyPanel(airplane);
+				panel = new MyPanel();
 				panel.setBounds(100, 100, 1000, 540);
 				frame.getContentPane().add(panel);
 				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());

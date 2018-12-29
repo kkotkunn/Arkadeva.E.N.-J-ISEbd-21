@@ -4,14 +4,18 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class MyPanel extends JPanel {
-	ITransport airplane;
+	public static ITransport airplane;
+	public static boolean initialization = false;
 
-	public MyPanel(ITransport air) {
-		airplane = air;
+	void setAir(ITransport transport) {
+		airplane = transport;
 	}
 
+	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		airplane.DrawAirplane(g);
+		if (airplane != null) {
+			airplane.DrawAirplane(g);
+		}
 	}
 }

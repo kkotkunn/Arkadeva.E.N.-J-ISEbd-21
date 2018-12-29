@@ -3,6 +3,7 @@ package labs;
 import java.awt.Color;
 import java.awt.Graphics;
 import labs.DirectionAir.Direction;
+import java.awt.Color;
 
 public class Airplane extends Vehicle {
 
