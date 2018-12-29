@@ -68,7 +68,6 @@ public class Main {
 		buttonLeft.setIconTextGap(2);
 
 		buttonLeft.setIcon(new ImageIcon("D:\\Users\\User\\workspace\\Labarator1\\image\\6fiCCVUlkSk.jpg"));
-		// btnNewButton.setIco
 		buttonLeft.setBounds(1013, 691, 40, 40);
 		frame.getContentPane().add(buttonLeft);
 
