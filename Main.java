@@ -52,9 +52,9 @@ public class Main {
 				frame.getContentPane().add(panel);
 				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());
 				panel.repaint();
-
 			}
 		});
+
 		button.setBounds(161, 10, 99, 24);
 		frame.getContentPane().add(button);
 
@@ -68,7 +68,6 @@ public class Main {
 				frame.getContentPane().add(panel);
 				airplane.SetPosition(100, 100, panel.getWidth(), panel.getHeight());
 				panel.repaint();
-
 			}
 		});
 		button2.setBounds(43, 10, 112, 24);
